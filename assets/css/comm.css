@@ -280,24 +280,58 @@ legend {
   content: "";
 }
 
-.card {
-  position: relative;
-  height: 300px;
-  border: 1px solid #fff;
-  background-color: #F44336;
-}
-.card span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.slide li {
-  height: 300px;
+#header {
+  height: 70px;
 }
-.slide li a {
-  display: block;
-  height: 100%;
-  color: #F44336;
+
+#main {
+  flex-grow: 1;
+  min-height: calc(100vh - 70px - 70px);
+}
+
+#footer {
+  height: 70px;
+}
+
+#header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#header .col-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#header .util ul {
+  display: flex;
+}
+#header .util .link-g {
+  align-items: center;
+  display: flex;
+  height: 70px;
+}
+#header .util .link-g::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+#header .util .link-lang::before {
+  content: "\f0ac";
+}
+#header .util .link-search::before {
+  content: "\f002";
+}
+#header .util .link-mypage::before {
+  content: "\f007";
+}
+
+.slide-intro swiper-slide {
+  height: 300px;
+  background: #F44336;
 }/*# sourceMappingURL=comm.css.map */
